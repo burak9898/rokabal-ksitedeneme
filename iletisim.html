@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Osman Burak Özmen">
+  <meta name="copyright" content="© 2026 Osman Burak Özmen. Tüm hakları saklıdır.">
+  <meta name="description"
+    content="Roka Balık Ordu — İletişim ve Rezervasyon. Masanızı hemen ayırtın. Adres: Akyazı, 823. Sk. No:2, Altınordu/Ordu. Tel: (0452) 888 88 87">
+  <title>İletişim & Rezervasyon — Roka Balık Ordu</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="loader" id="loader">
+    <div class="loader-logo">Roka <span>Balık</span></div>
+    <div class="loader-bar">
+      <div class="loader-bar-inner"></div>
+    </div>
+  </div>
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">
+          <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="22" cy="22" r="20" stroke="#c9a96e" stroke-width="1.5" fill="none" />
+            <path d="M12 26 C14 20, 18 16, 22 14 C26 16, 30 20, 32 26" stroke="#c9a96e" stroke-width="1.5" fill="none"
+              stroke-linecap="round" />
+            <path d="M16 24 C18 20, 20 18, 22 17 C24 18, 26 20, 28 24" stroke="#c9a96e" stroke-width="1" fill="none"
+              opacity="0.5" />
+            <line x1="22" y1="14" x2="22" y2="30" stroke="#c9a96e" stroke-width="1" opacity="0.4" />
+            <path d="M18 28 Q22 32 26 28" stroke="#c9a96e" stroke-width="1" fill="none" stroke-linecap="round" />
+          </svg>
+        </div>
+        <span class="nav-logo-text" style="color:var(--color-primary)">ROKA BALIK</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" style="color:var(--color-text)">Anasayfa</a>
+        <a href="menu.html" style="color:var(--color-text)">Menü</a>
+        <a href="hakkimizda.html" style="color:var(--color-text)">Hakkımızda</a>
+        <a href="iletisim.html" class="active" style="color:var(--color-text)">İletişim</a>
+        <a href="iletisim.html" class="nav-cta">Rezervasyon</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span style="background:var(--color-primary)"></span>
+        <span style="background:var(--color-primary)"></span>
+        <span style="background:var(--color-primary)"></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Anasayfa</a>
+    <a href="menu.html">Menü</a>
+    <a href="hakkimizda.html">Hakkımızda</a>
+    <a href="iletisim.html">İletişim</a>
+    <a href="iletisim.html">Rezervasyon</a>
+  </div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <img src="assets/images/restaurant-interior.png" alt="Roka Balık İletişim">
+    </div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <h1 class="page-hero-title">İletişim & Rezervasyon</h1>
+      <p class="page-hero-subtitle">Masanızı ayırtın, unutulmaz bir akşama hazırlanın</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Reservation Form -->
+        <div class="reservation-form reveal-left">
+          <h3>Rezervasyon Yapın</h3>
+          <div class="gold-divider"></div>
+
+          <form id="reservationForm" onsubmit="return handleReservation(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fullname">Ad Soyad</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Adınız Soyadınız" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Telefon Numarası</label>
+                <input type="tel" id="phone" name="phone" placeholder="05XX XXX XX XX" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="date">Tarih</label>
+                <input type="date" id="date" name="date" required>
+              </div>
+              <div class="form-group">
+                <label for="time">Saat</label>
+                <select id="time" name="time" required>
+                  <option value="">Saat Seçiniz</option>
+                  <option value="11:00">11:00</option>
+                  <option value="11:30">11:30</option>
+                  <option value="12:00">12:00</option>
+                  <option value="12:30">12:30</option>
+                  <option value="13:00">13:00</option>
+                  <option value="13:30">13:30</option>
+                  <option value="14:00">14:00</option>
+                  <option value="17:00">17:00</option>
+                  <option value="17:30">17:30</option>
+                  <option value="18:00">18:00</option>
+                  <option value="18:30">18:30</option>
+                  <option value="19:00">19:00</option>
+                  <option value="19:30">19:30</option>
+                  <option value="20:00">20:00</option>
+                  <option value="20:30">20:30</option>
+                  <option value="21:00">21:00</option>
+                  <option value="21:30">21:30</option>
+                  <option value="22:00">22:00</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="guests">Kişi Sayısı</label>
+                <select id="guests" name="guests" required>
+                  <option value="">Kişi Sayısı</option>
+                  <option value="1">1 Kişi</option>
+                  <option value="2">2 Kişi</option>
+                  <option value="3">3 Kişi</option>
+                  <option value="4">4 Kişi</option>
+                  <option value="5">5 Kişi</option>
+                  <option value="6">6 Kişi</option>
+                  <option value="7">7 Kişi</option>
+                  <option value="8">8 Kişi</option>
+                  <option value="9">9 Kişi</option>
+                  <option value="10+">10+ Kişi</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="email">E-posta (Opsiyonel)</label>
+                <input type="email" id="email" name="email" placeholder="ornek@email.com">
+              </div>
+            </div>
+
+            <div class="form-group full">
+              <label for="notes">Özel Notlar</label>
+              <textarea id="notes" name="notes"
+                placeholder="Doğum günü, özel diyet, pencere kenarı tercihi gibi notlarınızı yazabilirsiniz..."></textarea>
+            </div>
+
+            <div class="form-submit">
+              <button type="submit" class="btn-primary" id="submitBtn">
+                Rezervasyon Gönder
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info reveal-right">
+
+          <!-- Phone -->
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+              </svg>
+            </div>
+            <div>
+              <h4>Telefon</h4>
+              <p><a href="tel:+904528888887">(0452) 888 88 87</a></p>
+              <p style="font-size:0.8rem; color:var(--color-text-muted); margin-top:0.3rem;">Rezervasyon ve bilgi için
+                arayabilirsiniz</p>
+            </div>
+          </div>
+
+          <!-- Address -->
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+            <div>
+              <h4>Adres</h4>
+              <p>Akyazı, 823. Sk. No:2,<br>52200 Altınordu/Ordu</p>
+            </div>
+          </div>
+
+          <!-- Social Media -->
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </div>
+            <div>
+              <h4>Bizi Takip Edin</h4>
+              <div class="social-links">
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/rokabalikordu/" target="_blank" rel="noopener" class="social-link"
+                  aria-label="Instagram">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor"
+                      stroke-width="2" />
+                    <circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2" />
+                    <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" />
+                  </svg>
+                </a>
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/rokabalikordu" target="_blank" rel="noopener" class="social-link"
+                  aria-label="Facebook">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" fill="currentColor" />
+                  </svg>
+                </a>
+                <!-- TripAdvisor -->
+                <a href="http://www.tripadvisor.com.tr/UserReviewEdit-d23635893?m=68676" target="_blank" rel="noopener"
+                  class="social-link" aria-label="TripAdvisor">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="6.5" cy="13.5" r="3" fill="none" stroke="currentColor" stroke-width="2" />
+                    <circle cx="17.5" cy="13.5" r="3" fill="none" stroke="currentColor" stroke-width="2" />
+                    <path d="M3 13.5C3 10 6 7 12 7s9 3 9 6.5" fill="none" stroke="currentColor" stroke-width="2" />
+                    <path d="M12 4v3" stroke="currentColor" stroke-width="2" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map -->
+          <div class="contact-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.123!2d36.8654!3d40.9833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDU5JzAwLjAiTiAzNsKwNTEnNTUuNCJF!5e0!3m2!1str!2str!4v1"
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" title="Roka Balık Ordu Konum">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">Roka <span>Balık</span></div>
+          <p>Karadeniz'in eşsiz lezzetlerini, Ordu'nun büyüleyici atmosferinde misafirlerimize sunmaktan gurur
+            duyuyoruz.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/rokabalikordu/" target="_blank" rel="noopener" class="footer-social-link"
+              aria-label="Instagram">
+              <svg viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor"
+                  stroke-width="2" />
+                <circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2" />
+                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" />
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/rokabalikordu" target="_blank" rel="noopener" class="footer-social-link"
+              aria-label="Facebook">
+              <svg viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" fill="currentColor" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Sayfalar</h4>
+          <a href="index.html">Anasayfa</a>
+          <a href="menu.html">Menü</a>
+          <a href="hakkimizda.html">Hakkımızda</a>
+          <a href="iletisim.html">İletişim</a>
+        </div>
+        <div class="footer-col">
+          <h4>Menü</h4>
+          <a href="menu.html">Çorbalar</a>
+          <a href="menu.html">Mezeler</a>
+          <a href="menu.html">Balıklar</a>
+          <a href="menu.html">Ana Yemekler</a>
+        </div>
+        <div class="footer-col">
+          <h4>İletişim</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <span>Akyazı, 823. Sk. No:2,<br>52200 Altınordu/Ordu</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+            </svg>
+            <span>(0452) 888 88 87</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          © 2026 <strong>Roka Balık</strong> — Tüm hakları saklıdır.<br>
+          Bu web sitesi <strong>Osman Burak Özmen</strong> tarafından tasarlanmış ve geliştirilmiştir.
+        </div>
+        <div class="footer-legal">
+          Bu web sitesinin tüm içeriği, tasarımı ve kaynak kodları 5846 sayılı Fikir ve Sanat Eserleri Kanunu
+          kapsamında telif haklarına tabidir. İzinsiz kullanımı yasaktır. © Osman Burak Özmen
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Osman Burak Özmen">
+  <meta name="copyright" content="© 2026 Osman Burak Özmen. Tüm hakları saklıdır.">
+  <meta name="description"
+    content="Roka Balık Ordu Menü — Taze deniz ürünleri, çorbalar, mezeler, ızgara balıklar, ana yemekler ve daha fazlası.">
+  <title>Menü — Roka Balık Ordu</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Loading Screen -->
+  <div class="loader" id="loader">
+    <div class="loader-logo">Roka <span>Balık</span></div>
+    <div class="loader-bar">
+      <div class="loader-bar-inner"></div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">
+          <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="22" cy="22" r="20" stroke="#c9a96e" stroke-width="1.5" fill="none" />
+            <path d="M12 26 C14 20, 18 16, 22 14 C26 16, 30 20, 32 26" stroke="#c9a96e" stroke-width="1.5" fill="none"
+              stroke-linecap="round" />
+            <path d="M16 24 C18 20, 20 18, 22 17 C24 18, 26 20, 28 24" stroke="#c9a96e" stroke-width="1" fill="none"
+              opacity="0.5" />
+            <line x1="22" y1="14" x2="22" y2="30" stroke="#c9a96e" stroke-width="1" opacity="0.4" />
+            <path d="M18 28 Q22 32 26 28" stroke="#c9a96e" stroke-width="1" fill="none" stroke-linecap="round" />
+          </svg>
+        </div>
+        <span class="nav-logo-text" style="color:var(--color-primary)">ROKA BALIK</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" style="color:var(--color-text)">Anasayfa</a>
+        <a href="menu.html" class="active" style="color:var(--color-text)">Menü</a>
+        <a href="hakkimizda.html" style="color:var(--color-text)">Hakkımızda</a>
+        <a href="iletisim.html" style="color:var(--color-text)">İletişim</a>
+        <a href="iletisim.html" class="nav-cta">Rezervasyon</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span style="background:var(--color-primary)"></span>
+        <span style="background:var(--color-primary)"></span>
+        <span style="background:var(--color-primary)"></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Anasayfa</a>
+    <a href="menu.html">Menü</a>
+    <a href="hakkimizda.html">Hakkımızda</a>
+    <a href="iletisim.html">İletişim</a>
+    <a href="iletisim.html">Rezervasyon</a>
+  </div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <img src="assets/images/seafood-meze.png" alt="Roka Balık Menü">
+    </div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <h1 class="page-hero-title">Menümüz</h1>
+      <p class="page-hero-subtitle">Karadeniz'in en taze lezzetleri, ustalıkla sofranıza</p>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="menu-section">
+    <div class="container">
+
+      <!-- Menu Tabs -->
+      <div class="menu-tabs" id="menuTabs">
+        <button class="menu-tab active" data-tab="corba">Çorba</button>
+        <button class="menu-tab" data-tab="yoresel-meze">Yöresel Meze</button>
+        <button class="menu-tab" data-tab="soguk-meze">Soğuk Meze</button>
+        <button class="menu-tab" data-tab="deniz-meze">Deniz Ürünleri Meze</button>
+        <button class="menu-tab" data-tab="ara-sicak">Ara Sıcak</button>
+        <button class="menu-tab" data-tab="salata">Salata</button>
+        <button class="menu-tab" data-tab="ana-yemek">Ana Yemek</button>
+        <button class="menu-tab" data-tab="gunluk-balik">Günlük Balıklar</button>
+        <button class="menu-tab" data-tab="aperatif">Aperatifler</button>
+        <button class="menu-tab" data-tab="tatli">Tatlı</button>
+        <button class="menu-tab" data-tab="cerezler">Çerezler</button>
+        <button class="menu-tab" data-tab="alkolsuz">Alkolsüz İçecek</button>
+        <button class="menu-tab" data-tab="kokteyl">Kokteyller</button>
+        <button class="menu-tab" data-tab="sarap">Şarap</button>
+        <button class="menu-tab" data-tab="raki">Rakı</button>
+        <button class="menu-tab" data-tab="bira">Bira</button>
+        <button class="menu-tab" data-tab="viski">Viski</button>
+        <button class="menu-tab" data-tab="votka">Votka</button>
+        <button class="menu-tab" data-tab="cin">Cin</button>
+        <button class="menu-tab" data-tab="tekila">Tekila</button>
+        <button class="menu-tab" data-tab="rom">Rom</button>
+        <button class="menu-tab" data-tab="likor">Likör</button>
+        <button class="menu-tab" data-tab="vermut">Vermut</button>
+        <button class="menu-tab" data-tab="premium">Premium Alkol</button>
+      </div>
+
+      <!-- ÇORBA -->
+      <div class="menu-category active" id="corba">
+        <h3 class="menu-category-title">Çorbalar</h3>
+        <div class="menu-items-grid">
+          <div class="menu-item"><span class="menu-item-name">Balık Çorbası</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Mercimek Çorbası</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Ezogelin Çorbası</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+        </div>
+      </div>
+
+      <!-- YÖRESEL MEZE -->
+      <div class="menu-category" id="yoresel-meze">
+        <h3 class="menu-category-title">Yöresel Otlu Meze</h3>
+        <div class="menu-items-grid">
+          <div class="menu-item"><span class="menu-item-name">Karalahana Sarması</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Muhlama (Kuymak)</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Karadeniz Pilavı</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Pancar Kavurması</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Lahana Turşusu</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Yöresel Otlu Peynir</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Mısır Ekmeği</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Karadeniz Pidesi</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+        </div>
+      </div>
+
+      <!-- SOĞUK MEZE -->
+      <div class="menu-category" id="soguk-meze">
+        <h3 class="menu-category-title">Soğuk Mezeler</h3>
+        <div class="menu-items-grid">
+          <div class="menu-item"><span class="menu-item-name">Haydari</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Atom</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Babagannuş</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Acılı Ezme</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Humus</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Patlıcan Salatası</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Rus Salatası</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Havuç Tarator</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Şakşuka</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Yoğurtlu Semizotu</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+        </div>
+      </div>
+
+      <!-- DENİZ ÜRÜNLERİ MEZE -->
+      <div class="menu-category" id="deniz-meze">
+        <h3 class="menu-category-title">Deniz Ürünleri Meze</h3>
+        <div class="menu-items-grid">
+          <div class="menu-item"><span class="menu-item-name">Karidesli Güveç</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Ahtapot Salatası</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Karides Sote</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Midye Tava</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Kalamar Tava</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Deniz Börülcesi</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Balık Köftesi</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+        </div>
+      </div>
+
+      <!-- ARA SICAK -->
+      <div class="menu-category" id="ara-sicak">
+        <h3 class="menu-category-title">Ara Sıcak</h3>
+        <div class="menu-items-grid">
+          <div class="menu-item"><span class="menu-item-name">Sigara Böreği</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Kaşarlı Mantar</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Paçanga Böreği</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Halloumi</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Patlıcan Kızartma</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Sücük Izgara</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+        </div>
+      </div>
+
+      <!-- SALATA -->
+      <div class="menu-category" id="salata">
+        <h3 class="menu-category-title">Salatalar</h3>
+        <div class="menu-items-grid">
+          <div class="menu-item"><span class="menu-item-name">Mevsim Salata</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Çoban Salata</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Roka Parmesan Salata</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Sezar Salata</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Akdeniz Salata</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+        </div>
+      </div>
+
+      <!-- ANA YEMEK -->
+      <div class="menu-category" id="ana-yemek">
+        <h3 class="menu-category-title">Ana Yemekler</h3>
+        <div class="menu-items-grid">
+          <div class="menu-item"><span class="menu-item-name">Bonfile</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Antrikot</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Pirzola</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Tavuk Şiş</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Tavuk Kanat</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Köfte</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+        </div>
+      </div>
+
+      <!-- GÜNLÜK BALIKLAR -->
+      <div class="menu-category" id="gunluk-balik">
+        <h3 class="menu-category-title">Günlük Balıklar</h3>
+        <div class="menu-items-grid">
+          <div class="menu-item-note">* Balıklarımız mevsime göre değişmektedir. Günlük taze balık çeşitlerimiz için
+            lütfen servis ekibimize danışınız.</div>
+          <div class="menu-item"><span class="menu-item-name">Hamsi (Mevsiminde)</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Günlük</span></div>
+          <div class="menu-item"><span class="menu-item-name">Levrek</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Günlük</span></div>
+          <div class="menu-item"><span class="menu-item-name">Çipura</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Günlük</span></div>
+          <div class="menu-item"><span class="menu-item-name">Lüfer</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Günlük</span></div>
+          <div class="menu-item"><span class="menu-item-name">Palamut</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Günlük</span></div>
+          <div class="menu-item"><span class="menu-item-name">Mezgit</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Günlük</span></div>
+          <div class="menu-item"><span class="menu-item-name">İstavrit</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Günlük</span></div>
+          <div class="menu-item"><span class="menu-item-name">Kalkan</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Günlük</span></div>
+          <div class="menu-item"><span class="menu-item-name">Somon</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Günlük</span></div>
+          <div class="menu-item"><span class="menu-item-name">Sardalya</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Günlük</span></div>
+          <div class="menu-item"><span class="menu-item-name">Barbun</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Günlük</span></div>
+        </div>
+      </div>
+
+      <!-- APERATİFLER -->
+      <div class="menu-category" id="aperatif">
+        <h3 class="menu-category-title">Aperatifler</h3>
+        <div class="menu-items-grid">
+          <div class="menu-item"><span class="menu-item-name">Patates Kızartması</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Soğan Halkası</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Çıtır Tavuk</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Mozzarella Stick</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+        </div>
+      </div>
+
+      <!-- TATLI -->
+      <div class="menu-category" id="tatli">
+        <h3 class="menu-category-title">Tatlılar</h3>
+        <div class="menu-items-grid">
+          <div class="menu-item"><span class="menu-item-name">Künefe</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Sütlaç</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Kazandibi</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Profiterol</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Trileçe</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Baklava</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Dondurma (Çeşitli)</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Mevsim Meyve Tabağı</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+        </div>
+      </div>
+
+      <!-- ÇEREZLER -->
+      <div class="menu-category" id="cerezler">
+        <h3 class="menu-category-title">Çerezler</h3>
+        <div class="menu-items-grid">
+          <div class="menu-item"><span class="menu-item-name">Kaju</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Antep Fıstığı</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Badem</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Fındık</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Karışık Çerez</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Leblebi</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+        </div>
+      </div>
+
+      <!-- ALKOLSÜZ İÇECEK -->
+      <div class="menu-category" id="alkolsuz">
+        <h3 class="menu-category-title">Alkolsüz İçecekler</h3>
+        <div class="menu-items-grid">
+          <div class="menu-item"><span class="menu-item-name">Çay</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Türk Kahvesi</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Nescafe</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Taze Sıkılmış Portakal Suyu</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Taze Limonata</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Ayran</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Su (0.5L / 1L)</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Maden Suyu / Soda</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Meşrubat (Kola, Fanta, Sprite)</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Ice Tea</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Red Bull</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+        </div>
+      </div>
+
+      <!-- KOKTEYLLER -->
+      <div class="menu-category" id="kokteyl">
+        <h3 class="menu-category-title">Kokteyller</h3>
+        <div class="menu-items-grid">
+          <div class="menu-item-note"
+            style="border:none; padding-bottom: 0.5rem; font-weight:600; color:var(--color-primary);">Alkollü Kokteyller
+          </div>
+          <div class="menu-item"><span class="menu-item-name">Mojito</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Aperol Spritz</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Margarita</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Cosmopolitan</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Long Island</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Gin Tonic</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item-note"
+            style="border:none; padding: 1.5rem 0 0.5rem; font-weight:600; color:var(--color-primary);">Alkolsüz
+            Kokteyller</div>
+          <div class="menu-item"><span class="menu-item-name">Virgin Mojito</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Paşiflora Cooler</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Berry Lemonade</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Mango Smoothie</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+        </div>
+      </div>
+
+      <!-- ŞARAP -->
+      <div class="menu-category" id="sarap">
+        <h3 class="menu-category-title">Şarap</h3>
+        <div class="menu-items-grid">
+          <div class="menu-item-note">* Geniş şarap yelpazemiz için garsonumuza danışınız. Beyaz, kırmızı ve roze
+            seçeneklerimiz mevcuttur.</div>
+          <div class="menu-item"><span class="menu-item-name">Beyaz Şarap (Kadeh)</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Beyaz Şarap (Şişe)</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Kırmızı Şarap (Kadeh)</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Kırmızı Şarap (Şişe)</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Roze Şarap (Kadeh)</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Roze Şarap (Şişe)</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+        </div>
+      </div>
+
+      <!-- RAKI -->
+      <div class="menu-category" id="raki">
+        <h3 class="menu-category-title">Rakı</h3>
+        <div class="menu-items-grid">
+          <div class="menu-item"><span class="menu-item-name">Yeni Rakı (35cl)</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Yeni Rakı (70cl)</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Tekirdağ Rakı (35cl)</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Tekirdağ Rakı (70cl)</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Efe Rakı (35cl)</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Efe Rakı (70cl)</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+        </div>
+      </div>
+
+      <!-- BİRA -->
+      <div class="menu-category" id="bira">
+        <h3 class="menu-category-title">Bira</h3>
+        <div class="menu-items-grid">
+          <div class="menu-item"><span class="menu-item-name">Efes Pilsen</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Efes Özel Seri</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Bomonti Filtresiz</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Corona</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Heineken</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Miller</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+        </div>
+      </div>
+
+      <!-- VİSKİ -->
+      <div class="menu-category" id="viski">
+        <h3 class="menu-category-title">Viski</h3>
+        <div class="menu-items-grid">
+          <div class="menu-item"><span class="menu-item-name">Jack Daniel's</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Johnnie Walker Red</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Johnnie Walker Black</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Chivas Regal</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Ballantine's</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Jameson</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+        </div>
+      </div>
+
+      <!-- VOTKA -->
+      <div class="menu-category" id="votka">
+        <h3 class="menu-category-title">Votka</h3>
+        <div class="menu-items-grid">
+          <div class="menu-item"><span class="menu-item-name">Absolut</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Smirnoff</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Grey Goose</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Belvedere</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">İstanblue</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+        </div>
+      </div>
+
+      <!-- CİN -->
+      <div class="menu-category" id="cin">
+        <h3 class="menu-category-title">Cin</h3>
+        <div class="menu-items-grid">
+          <div class="menu-item"><span class="menu-item-name">Bombay Sapphire</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Beefeater</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Hendrick's</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Gordon's</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Tanqueray</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+        </div>
+      </div>
+
+      <!-- TEKİLA -->
+      <div class="menu-category" id="tekila">
+        <h3 class="menu-category-title">Tekila</h3>
+        <div class="menu-items-grid">
+          <div class="menu-item"><span class="menu-item-name">Jose Cuervo</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Sierra Silver</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Sierra Gold</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Patron Silver</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+        </div>
+      </div>
+
+      <!-- ROM -->
+      <div class="menu-category" id="rom">
+        <h3 class="menu-category-title">Rom</h3>
+        <div class="menu-items-grid">
+          <div class="menu-item"><span class="menu-item-name">Bacardi White</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Bacardi Gold</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Captain Morgan</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Havana Club</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+        </div>
+      </div>
+
+      <!-- LİKÖR -->
+      <div class="menu-category" id="likor">
+        <h3 class="menu-category-title">Likör</h3>
+        <div class="menu-items-grid">
+          <div class="menu-item"><span class="menu-item-name">Baileys</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Jägermeister</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Kahlúa</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Malibu</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Amaretto</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+        </div>
+      </div>
+
+      <!-- VERMUT -->
+      <div class="menu-category" id="vermut">
+        <h3 class="menu-category-title">Vermut</h3>
+        <div class="menu-items-grid">
+          <div class="menu-item"><span class="menu-item-name">Martini Bianco</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Martini Rosso</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Martini Extra Dry</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Cinzano</span><span class="menu-item-dots"></span><span
+              class="menu-item-price">Sorunuz</span></div>
+        </div>
+      </div>
+
+      <!-- PREMIUM ALKOL -->
+      <div class="menu-category" id="premium">
+        <h3 class="menu-category-title">Premium Alkoller</h3>
+        <div class="menu-items-grid">
+          <div class="menu-item-note">* Premium alkol yelpazemiz için lütfen servis ekibimize danışınız.</div>
+          <div class="menu-item"><span class="menu-item-name">Hennessy VS</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Hennessy VSOP</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Johnnie Walker Blue</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Macallan 12</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+          <div class="menu-item"><span class="menu-item-name">Glenfiddich 12</span><span
+              class="menu-item-dots"></span><span class="menu-item-price">Sorunuz</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">Roka <span>Balık</span></div>
+          <p>Karadeniz'in eşsiz lezzetlerini, Ordu'nun büyüleyici atmosferinde misafirlerimize sunmaktan gurur
+            duyuyoruz.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/rokabalikordu/" target="_blank" rel="noopener" class="footer-social-link"
+              aria-label="Instagram">
+              <svg viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor"
+                  stroke-width="2" />
+                <circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2" />
+                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" />
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/rokabalikordu" target="_blank" rel="noopener" class="footer-social-link"
+              aria-label="Facebook">
+              <svg viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" fill="currentColor" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Sayfalar</h4>
+          <a href="index.html">Anasayfa</a>
+          <a href="menu.html">Menü</a>
+          <a href="hakkimizda.html">Hakkımızda</a>
+          <a href="iletisim.html">İletişim</a>
+        </div>
+        <div class="footer-col">
+          <h4>Menü</h4>
+          <a href="menu.html">Çorbalar</a>
+          <a href="menu.html">Mezeler</a>
+          <a href="menu.html">Balıklar</a>
+          <a href="menu.html">Ana Yemekler</a>
+        </div>
+        <div class="footer-col">
+          <h4>İletişim</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <span>Akyazı, 823. Sk. No:2,<br>52200 Altınordu/Ordu</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+            </svg>
+            <span>(0452) 888 88 87</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          © 2026 <strong>Roka Balık</strong> — Tüm hakları saklıdır.<br>
+          Bu web sitesi <strong>Osman Burak Özmen</strong> tarafından tasarlanmış ve geliştirilmiştir.
+        </div>
+        <div class="footer-legal">
+          Bu web sitesinin tüm içeriği, tasarımı ve kaynak kodları 5846 sayılı Fikir ve Sanat Eserleri Kanunu
+          kapsamında telif haklarına tabidir. İzinsiz kullanımı yasaktır. © Osman Burak Özmen
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

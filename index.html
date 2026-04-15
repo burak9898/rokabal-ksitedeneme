@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Osman Burak Özmen">
+    <meta name="copyright" content="© 2026 Osman Burak Özmen. Tüm hakları saklıdır.">
+    <meta name="description"
+        content="Roka Balık Ordu — Karadeniz'in en seçkin balık restoranı. Taze deniz ürünleri, eşsiz lezzetler ve unutulmaz bir atmosfer. Altınordu, Ordu.">
+    <title>Roka Balık Ordu — Karadeniz'in Lezzet Durağı</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-logo">Roka <span>Balık</span></div>
+        <div class="loader-bar">
+            <div class="loader-bar-inner"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <div class="nav-logo-icon">
+                    <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="22" cy="22" r="20" stroke="#c9a96e" stroke-width="1.5" fill="none" />
+                        <path d="M12 26 C14 20, 18 16, 22 14 C26 16, 30 20, 32 26" stroke="#c9a96e" stroke-width="1.5"
+                            fill="none" stroke-linecap="round" />
+                        <path d="M16 24 C18 20, 20 18, 22 17 C24 18, 26 20, 28 24" stroke="#c9a96e" stroke-width="1"
+                            fill="none" opacity="0.5" />
+                        <line x1="22" y1="14" x2="22" y2="30" stroke="#c9a96e" stroke-width="1" opacity="0.4" />
+                        <path d="M18 28 Q22 32 26 28" stroke="#c9a96e" stroke-width="1" fill="none"
+                            stroke-linecap="round" />
+                    </svg>
+                </div>
+                <span class="nav-logo-text">ROKA BALIK</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html" class="active">Anasayfa</a>
+                <a href="menu.html">Menü</a>
+                <a href="hakkimizda.html">Hakkımızda</a>
+                <a href="iletisim.html">İletişim</a>
+                <a href="iletisim.html" class="nav-cta">Rezervasyon</a>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Anasayfa</a>
+        <a href="menu.html">Menü</a>
+        <a href="hakkimizda.html">Hakkımızda</a>
+        <a href="iletisim.html">İletişim</a>
+        <a href="iletisim.html">Rezervasyon</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="assets/images/hero-grilled-fish.png" alt="Roka Balık — Izgara Balık">
+        </div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <p class="hero-label">Altınordu, Ordu — Est. Karadeniz</p>
+            <h1 class="hero-title">
+                Roka Balık
+                <span>Karadeniz'in Kalbinden Sofranıza</span>
+            </h1>
+            <p class="hero-description">
+                Ordu'nun eşsiz deniz manzarası eşliğinde, en taze Karadeniz balıklarını
+                ustalıkla hazırlıyor, lezzeti sanata dönüştürüyoruz.
+            </p>
+            <div class="hero-buttons">
+                <a href="menu.html" class="btn-primary">Menüyü Keşfet</a>
+                <a href="iletisim.html" class="btn-outline">Rezervasyon Yap</a>
+            </div>
+        </div>
+
+        <div class="hero-scroll">
+            <span>Keşfet</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Ordu & Karadeniz Story Section -->
+    <section class="story-section" id="story">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-image reveal-left">
+                    <img src="assets/images/ordu-panorama.png" alt="Ordu Karadeniz Manzarası">
+                    <div class="story-image-accent"></div>
+                </div>
+
+                <div class="story-text reveal-right">
+                    <div class="section-label">Lezzet Mirasımız</div>
+                    <h2 class="section-title">Karadeniz'in En Taze Lezzetleri</h2>
+                    <div class="gold-divider"></div>
+
+                    <div class="highlight">
+                        "Sadece bir yemek değil, denizin kalbinden gelen bir lezzet şöleni sunuyoruz.
+                        Her sabah kıyıya vuran en taze balıkları, ustalıkla harmanlayıp sofranıza taşıyoruz."
+                    </div>
+
+                    <p>
+                        Roka Balık olarak, kaliteyi ve tazeliği her zaman ilk sıraya koyuyoruz.
+                        Karadeniz'in bereketli sularından günlük olarak yakalanan mevsim balıklarını,
+                        geleneksel pişirme yöntemleri ve modern dokunuşlarla hazırlıyoruz. Denizden
+                        masanıza uzanan bu yolculukta, doğallıktan asla ödün vermiyoruz.
+                    </p>
+                    <p>
+                        Şeflerimizin tutkuyla hazırladığı özel mezelerimizden, ızgara çeşitlerimize kadar
+                        her detayda kusursuzluğu arıyoruz. Ordu'nun en seçkin balık restoranı olarak,
+                        misafirlerimize sadece bir akşam yemeği değil; tazelikle, nezaketle ve Karadeniz
+                        misafirperverliğiyle harmanlanmış unutulmaz bir deneyim vaat ediyoruz.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="philosophy-section" id="philosophy">
+        <div class="container">
+            <div style="text-align:center; margin-bottom:var(--space-xl);">
+                <div class="section-label" style="justify-content:center;">
+                    <span>Felsefemiz</span>
+                </div>
+                <h2 class="section-title light">Denizden Sofraya, Tutkuyla</h2>
+                <p class="section-subtitle light" style="margin:0 auto;">
+                    Her detayda mükemmelliği arayan, lezzeti bir yaşam biçimi olarak benimseyen bir anlayış.
+                </p>
+            </div>
+
+            <div class="philosophy-grid">
+                <div class="philosophy-card reveal">
+                    <div class="philosophy-card-number">01</div>
+                    <h3>Taze & Doğal</h3>
+                    <p>
+                        Karadeniz'in berrak sularından her gün taze yakalanan balıklar,
+                        doğanın bize sunduğu en saf lezzetlerdir. Hiçbir zaman donmuş ürün kullanmayız.
+                    </p>
+                </div>
+
+                <div class="philosophy-card reveal" style="transition-delay: 0.15s;">
+                    <div class="philosophy-card-number">02</div>
+                    <h3>Ustalık & Gelenek</h3>
+                    <p>
+                        Nesilden nesile aktarılan Karadeniz mutfak geleneklerini,
+                        modern sunum teknikleriyle harmanlıyoruz. Her yemek, bir hikâye anlatır.
+                    </p>
+                </div>
+
+                <div class="philosophy-card reveal" style="transition-delay: 0.3s;">
+                    <div class="philosophy-card-number">03</div>
+                    <h3>Atmosfer & Deneyim</h3>
+                    <p>
+                        Sadece yemek değil, bir deneyim sunuyoruz. Denizin sesi,
+                        mum ışığı, özenle seçilmiş müzik — her an unutulmaz olsun diye.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Dishes Section -->
+    <section class="dishes-section" id="dishes">
+        <div class="container">
+            <div class="dishes-header reveal">
+                <div class="section-label">Öne Çıkan Lezzetler</div>
+                <h2 class="section-title">İmza Tatlarımız</h2>
+                <p class="section-subtitle" style="margin:0 auto;">
+                    Mutfağımızın en sevilen ve en çok tercih edilen lezzetlerinden bir seçki.
+                </p>
+            </div>
+
+            <div class="dishes-grid">
+                <div class="dish-card reveal-scale">
+                    <div class="dish-card-image">
+                        <img src="assets/images/hero-grilled-fish.png" alt="Izgara Levrek">
+                        <div class="dish-card-overlay">
+                            <div class="dish-card-name">Izgara Levrek</div>
+                            <div class="dish-card-desc">Taze Karadeniz levreği, özel baharatlarla</div>
+                        </div>
+                        <div class="dish-card-price">Günlük Fiyat</div>
+                    </div>
+                </div>
+
+                <div class="dish-card reveal-scale" style="transition-delay: 0.15s;">
+                    <div class="dish-card-image">
+                        <img src="assets/images/seafood-meze.png" alt="Deniz Ürünleri Meze">
+                        <div class="dish-card-overlay">
+                            <div class="dish-card-name">Deniz Ürünleri Meze</div>
+                            <div class="dish-card-desc">Taze deniz ürünleriyle hazırlanan özel meze tabağı</div>
+                        </div>
+                        <div class="dish-card-price">Seçki</div>
+                    </div>
+                </div>
+
+                <div class="dish-card reveal-scale" style="transition-delay: 0.3s;">
+                    <div class="dish-card-image">
+                        <img src="assets/images/chef-kitchen.png" alt="Şef Özel">
+                        <div class="dish-card-overlay">
+                            <div class="dish-card-name">Şef'in Özel Menüsü</div>
+                            <div class="dish-card-desc">Her gün değişen, şefin özenle hazırladığı özel yemekler</div>
+                        </div>
+                        <div class="dish-card-price">Özel</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dishes-cta reveal">
+                <a href="menu.html" class="btn-dark">Tüm Menüyü Görüntüle →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chef & Craftsmanship Section -->
+    <section class="chef-section" id="chef">
+        <div class="container">
+            <div class="chef-grid">
+                <div class="chef-image reveal-left">
+                    <img src="assets/images/chef-kitchen.png" alt="Roka Balık Mutfak">
+                    <div class="chef-image-badge">Usta Eller</div>
+                </div>
+
+                <div class="reveal-right">
+                    <div class="section-label">Mutfak Sanatı</div>
+                    <h2 class="section-title">Zanaat ve Tutku</h2>
+                    <div class="gold-divider"></div>
+                    <p class="section-subtitle">
+                        Her tabağımız, yılların deneyimi ve Karadeniz'in eşsiz lezzetlerine
+                        olan tutkumuzun bir yansımasıdır.
+                    </p>
+                    <p style="color: var(--color-text-light); margin-top: var(--space-md); line-height: 1.9;">
+                        Mutfağımızda her gün taze malzemelerle, geleneksel tarifleri modern dokunuşlarla
+                        harmanlayarak misafirlerimize unutulmaz lezzetler sunuyoruz. Balıklarımız her sabah
+                        Karadeniz kıyılarından özenle seçilir, sebzelerimiz yöresel üreticilerden temin edilir.
+                    </p>
+
+                    <div class="chef-stats">
+                        <div class="chef-stat reveal">
+                            <div class="chef-stat-number">365</div>
+                            <div class="chef-stat-text">Gün Taze Balık</div>
+                        </div>
+                        <div class="chef-stat reveal" style="transition-delay:0.1s;">
+                            <div class="chef-stat-number">50+</div>
+                            <div class="chef-stat-text">Çeşit Meze</div>
+                        </div>
+                        <div class="chef-stat reveal" style="transition-delay:0.2s;">
+                            <div class="chef-stat-number">100%</div>
+                            <div class="chef-stat-text">Doğal Ürün</div>
+                        </div>
+                        <div class="chef-stat reveal" style="transition-delay:0.3s;">
+                            <div class="chef-stat-number">∞</div>
+                            <div class="chef-stat-text">Tutku & Sevgi</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Atmosphere Section -->
+    <section class="atmosphere-section" id="atmosphere">
+        <div class="container">
+            <div style="text-align:center; margin-bottom:var(--space-md);">
+                <div class="section-label" style="justify-content:center;">
+                    <span>Atmosfer</span>
+                </div>
+                <h2 class="section-title light">Deniz Kenarında Bir Akşam</h2>
+                <p class="section-subtitle light" style="margin:0 auto;">
+                    Karadeniz'in büyüleyici manzarası eşliğinde, huzurlu ve şık bir atmosferde unutulmaz anlar yaşayın.
+                </p>
+            </div>
+
+            <div class="atmosphere-gallery">
+                <div class="atmosphere-item reveal-scale">
+                    <img src="assets/images/restaurant-interior.png" alt="Roka Balık İç Mekan">
+                    <div class="atmosphere-item-overlay">
+                        <span>Şık İç Mekan</span>
+                    </div>
+                </div>
+                <div class="atmosphere-item reveal-scale" style="transition-delay:0.1s;">
+                    <img src="assets/images/seafood-meze.png" alt="Meze Tabağı">
+                    <div class="atmosphere-item-overlay">
+                        <span>Zengin Sofra</span>
+                    </div>
+                </div>
+                <div class="atmosphere-item reveal-scale" style="transition-delay:0.2s;">
+                    <img src="assets/images/ordu-panorama.png" alt="Ordu Manzarası">
+                    <div class="atmosphere-item-overlay">
+                        <span>Eşsiz Manzara</span>
+                    </div>
+                </div>
+                <div class="atmosphere-item reveal-scale" style="transition-delay:0.3s;">
+                    <img src="assets/images/hero-grilled-fish.png" alt="Izgara Lezzetler">
+                    <div class="atmosphere-item-overlay">
+                        <span>Izgara Lezzetler</span>
+                    </div>
+                </div>
+                <div class="atmosphere-item reveal-scale" style="transition-delay:0.4s;">
+                    <img src="assets/images/chef-kitchen.png" alt="Mutfak Sanatı">
+                    <div class="atmosphere-item-overlay">
+                        <span>Mutfak Sanatı</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation CTA Section -->
+    <section class="reservation-cta" id="reservationCta">
+        <div class="container">
+            <div class="section-label reveal">
+                <span>Rezervasyon</span>
+            </div>
+            <h2 class="section-title reveal">Masanızı Ayırtın</h2>
+            <p class="section-subtitle reveal" style="margin:0 auto;">
+                Karadeniz'in en özel lezzetlerini tatmak için yerinizi şimdiden ayırtın.
+                Unutulmaz bir akşam yemeği sizi bekliyor.
+            </p>
+
+            <div class="reveal" style="margin-top: var(--space-lg);">
+                <a href="iletisim.html" class="btn-primary">Rezervasyon Yap</a>
+            </div>
+
+            <div class="reservation-cta-info reveal">
+                <div class="reservation-cta-item">
+                    <span>Telefon</span>
+                    <strong>(0452) 888 88 87</strong>
+                </div>
+                <div class="reservation-cta-item">
+                    <span>Adres</span>
+                    <strong>Akyazı, Altınordu/Ordu</strong>
+                </div>
+                <div class="reservation-cta-item">
+                    <span>Çalışma Saatleri</span>
+                    <strong>Her Gün Açık</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo">Roka <span>Balık</span></div>
+                    <p>
+                        Karadeniz'in eşsiz lezzetlerini, Ordu'nun büyüleyici atmosferinde
+                        misafirlerimize sunmaktan gurur duyuyoruz. Her sofraya sevgi ve tutku katıyoruz.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/rokabalikordu/" target="_blank" rel="noopener"
+                            class="footer-social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor"
+                                    stroke-width="2" />
+                                <circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2" />
+                                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" />
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/rokabalikordu" target="_blank" rel="noopener"
+                            class="footer-social-link" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                                    fill="currentColor" />
+                            </svg>
+                        </a>
+                        <a href="http://www.tripadvisor.com.tr/UserReviewEdit-d23635893?m=68676" target="_blank"
+                            rel="noopener" class="footer-social-link" aria-label="TripAdvisor">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="6.5" cy="13.5" r="3" fill="none" stroke="currentColor" stroke-width="2" />
+                                <circle cx="17.5" cy="13.5" r="3" fill="none" stroke="currentColor" stroke-width="2" />
+                                <path d="M3 13.5C3 10 6 7 12 7s9 3 9 6.5" fill="none" stroke="currentColor"
+                                    stroke-width="2" />
+                                <path d="M12 4v3" stroke="currentColor" stroke-width="2" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Sayfalar</h4>
+                    <a href="index.html">Anasayfa</a>
+                    <a href="menu.html">Menü</a>
+                    <a href="hakkimizda.html">Hakkımızda</a>
+                    <a href="iletisim.html">İletişim</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Menü</h4>
+                    <a href="menu.html">Çorbalar</a>
+                    <a href="menu.html">Mezeler</a>
+                    <a href="menu.html">Balıklar</a>
+                    <a href="menu.html">Ana Yemekler</a>
+                    <a href="menu.html">Tatlılar</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>İletişim</h4>
+                    <div class="footer-contact-item">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                        <span>Akyazı, 823. Sk. No:2,<br>52200 Altınordu/Ordu</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+                        </svg>
+                        <span>(0452) 888 88 87</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    © 2026 <strong>Roka Balık</strong> — Tüm hakları saklıdır.<br>
+                    Bu web sitesi <strong>Osman Burak Özmen</strong> tarafından tasarlanmış ve geliştirilmiştir.
+                </div>
+                <div class="footer-legal">
+                    Bu web sitesinin tüm içeriği, tasarımı ve kaynak kodları 5846 sayılı Fikir ve Sanat Eserleri Kanunu
+                    kapsamında telif haklarına tabidir. İzinsiz kopyalanması, çoğaltılması veya kullanılması yasaktır.
+                    © Osman Burak Özmen
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
